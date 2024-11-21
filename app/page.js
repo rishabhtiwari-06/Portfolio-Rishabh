@@ -111,10 +111,10 @@ export default function Home() {
           </div>
           <div className="home-content">
             <h1>
-              Hi, It's <span>Rishabh</span>
+              Hi, It&apos;s <span>Rishabh</span>
             </h1>
             <h3 className="typing-text">
-              I'm a{" "}
+              I&apos;m a{" "}
               <span
                 className="cursor-pointer"
                 onMouseEnter={() => setIsHovering(true)}
@@ -374,7 +374,7 @@ export default function Home() {
         >
           <h1 className="text-4xl font-bold mb-4">About Me</h1>
           <p className="text-lg">
-            Hey there! I’m <span className="text-blue-500">Rishabh Tiwari</span>
+            Hey there! I&apos;m <span className="text-blue-500">Rishabh Tiwari</span>
             , a passionate developer skilled in MERN stack, Python, and more. I
             love building intuitive and animated web experiences!
           </p>
@@ -403,9 +403,9 @@ export default function Home() {
             </motion.div>
             <h2 className="text-2xl font-semibold mt-4">Who Am I?</h2>
             <p className="text-center text-gray-300 mt-2">
-              I’m a final-year B.C.A student with a strong passion for
+              I&apos;m a final-year B.C.A student with a strong passion for
               technology. I specialize in creating dynamic websites that are
-              both visually appealing and functional. I’m driven by the desire
+              both visually appealing and functional. I&apos;m driven by the desire
               to build meaningful solutions that solve real-world problems,
               blending creativity with technical expertise to deliver impactful
               results. Whether it's front-end design or back-end development, I
