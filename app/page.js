@@ -58,9 +58,10 @@ export default function Home() {
   const [isHovering, setIsHovering] = useState(false);
   const [showbox, setShowbox] = useState(false);
 
+  
   useEffect(() => {
     let interval;
-
+  
     if (isHovering) {
       setShowbox(true);
       interval = setInterval(() => {
@@ -70,9 +71,9 @@ export default function Home() {
       setShowbox(false);
       clearInterval(interval);
     }
-
+  
     return () => clearInterval(interval); // Cleanup interval on unmount
-  }, [isHovering]);
+  }, [isHovering, headings.length]); 
 
   return (
     <main className="min-h-screen flex flex-col bg-gradient-to-r from-slate-800 to-slate-950 text-white">
