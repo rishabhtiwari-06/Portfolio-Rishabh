@@ -247,7 +247,7 @@ export default function Home() {
               >
                 <h3>Password Manager Application</h3>
                 <Image
-                  src="/Password_manager.webp"
+                  src="/Password_Manager.webp"
                   alt="Password Manager"
                   width={200}
                   height={150}
@@ -315,8 +315,8 @@ export default function Home() {
             <div>
               <Image
                 className="h-[170px] w-[170] object-cover rounded-full"
-                src="/schl.webp"
-                alt=""
+                src="/Schl.webp"
+                alt="School Image"
                 width={170}
                 height={170}
               />
