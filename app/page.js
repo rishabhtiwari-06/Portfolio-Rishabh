@@ -10,12 +10,12 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function Home() {
   const helpRef = useRef(null);
   const carouselItems = [
-    "html.png",
-    "css.webp",
-    "nextjs.png",
-    "python.png",
-    "node.png",
-    "react.png",
+    "/html.png",
+    "/css.webp",
+    "/nextjs.png",
+    "/python.png",
+    "/node.png",
+    "/react.png",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -24,10 +24,9 @@ export default function Home() {
       setActiveIndex((prevIndex) =>
         prevIndex === carouselItems.length - 1 ? 0 : prevIndex + 1
       );
-    }, 1000); 
-    return () => clearInterval(interval); 
+    }, 1000);
+    return () => clearInterval(interval);
   }, [carouselItems.length]);
-
 
   const handleIndicatorClick = (index) => {
     setActiveIndex(index);
@@ -41,11 +40,11 @@ export default function Home() {
     "To Do List",
   ];
   const imagess = [
-    "gym.webp",
-    "Inventory.png",
-    "Password_Manager.webp",
-    "URLshortener.jpeg",
-    "todo.jpg",
+    "/gym.webp",
+    "/Inventory.png",
+    "/Password_Manager.webp",
+    "/URLshortener.jpeg",
+    "/todo.jpg",
   ];
   const color = [
     "bg-green-400",
@@ -66,7 +65,7 @@ export default function Home() {
       setShowbox(true);
       interval = setInterval(() => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % headings.length);
-      }, 400); 
+      }, 400);
     } else {
       setShowbox(false);
       clearInterval(interval);
@@ -82,25 +81,31 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-blue-500">Rishabh</h1>
         </div>
         <ul className="flex gap-6">
-          <a href="">
+          <Link href="">
             <li className="hover:text-blue-400 cursor-pointer">Home</li>
-          </a>
-          <a href="#project">
+          </Link>
+          <Link href="#project">
             <li className="hover:text-blue-400 cursor-pointer">Projects</li>
-          </a>
-          <a href="#education">
+          </Link>
+          <Link href="#education">
             <li className="hover:text-blue-400 cursor-pointer">Education</li>
-          </a>
-          <a href="#about">
+          </Link>
+          <Link href="#about">
             <li className="hover:text-blue-400 cursor-pointer">About</li>
-          </a>
+          </Link>
         </ul>
       </nav>
       <div className="min-h-[93vh]">
         <section className="home text-white bg-gradient-to-r from-slate-800 to-slate-950">
           <div className="home-img">
             <div className="border border-yellow rounded-full p-3 bg-yellow-300">
-              <img className="" src="picofme.png" alt="" />
+              <Image
+                className=""
+                src="/picofme.png"
+                alt="Rishabh"
+                width={200}
+                height={200}
+              />
             </div>
           </div>
           <div className="home-content">
@@ -124,37 +129,38 @@ export default function Home() {
               that solve real-world challenges.
             </p>
             <div className="social-icons">
-              <a
+              <Link
                 className="border border-solid border-green-500"
                 href="https://www.linkedin.com/in/rishabh-tiwari-291933231"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-linkedin text-gray-300 text-3xl"></i>
-              </a>
-              <a
+              </Link>
+              <Link
                 className="border border-solid border-green-500"
                 href="https://github.com/rishabhtiwari-06"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-github text-gray-200 text-3xl"></i>
-              </a>
+              </Link>
 
               {/* Email */}
-              <a
+              <Link
                 className="border border-solid border-green-500"
                 href="mailto:rishabhshyam0602@gmail.com"
               >
                 <i className="fa-solid fa-envelope text-gray-300 text-3xl"></i>
-              </a>
+              </Link>
             </div>
-            <a href="#project"
+            <Link
+              href="#project"
               // onClick={() => setShowsection1(true)}
               className="bg-slate-900 btn hover:bg-slate-800 m-2"
             >
               Start My Journey
-            </a>
+            </Link>
             {showbox && (
               <div className="absolute right-[130px] bottom-[150px]">
                 <Link
@@ -164,24 +170,26 @@ export default function Home() {
                   <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                     {headings[currentIndex]}
                   </h5>
-                  <img
+                  <Image
                     className="h-[250px] w-[250px] rounded-lg object-contain"
                     src={imagess[currentIndex]}
                     alt="Image"
+                    width={250}
+                    height={250}
                   />
                 </Link>
               </div>
             )}
           </div>
         </section>
-      </div>{" "}
+      </div>
+
       <section
         id="project"
         ref={helpRef}
         className="min-h-screen w-full flex flex-col "
       >
         <div className=" w-full bg-gray-800 flex justify-center items-center mb-4">
-          {" "}
           <h1 className="text-4xl font-bold py-2 ">
             PRO<span className="text-blue-500">JECTS</span>
           </h1>
@@ -192,75 +200,99 @@ export default function Home() {
             <div className="item cursor-pointer" style={{ "--position": 1 }}>
               <Link
                 target="_blank"
-                href={"https://github.com/rishabhtiwari-06/login-form"}
+                href="https://github.com/rishabhtiwari-06/login-form"
               >
                 <h3 className="text-xl">Login Form</h3>
-                <img src="login.jpg" alt="" />
+                <Image
+                  src="/login.jpg"
+                  alt="Login Form"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
             <div className="item cursor-pointer" style={{ "--position": 2 }}>
               <Link
                 target="_blank"
-                href={
-                  "https://github.com/rishabhtiwari-06/Inventory_Management_System"
-                }
+                href="https://github.com/rishabhtiwari-06/Inventory_Management_System"
               >
                 <h3>Inventory Management</h3>
-                <img src="Inventory.png" alt="" />
+                <Image
+                  src="/Inventory.png"
+                  alt="Inventory Management"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
-            <div
-              className="item cursor-pointer _blank"
-              style={{ "--position": 3 }}
-            >
+            <div className="item cursor-pointer" style={{ "--position": 3 }}>
               <Link
                 target="_blank"
-                href={
-                  "https://github.com/rishabhtiwari-06/Gym-Workout-Generator-Website"
-                }
+                href="https://github.com/rishabhtiwari-06/Gym-Workout-Generator-Website"
               >
                 <h3>GYM Workout</h3>
-                <img src="gym.webp" alt="" />
+                <Image
+                  src="/gym.webp"
+                  alt="GYM Workout"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
             <div className="item cursor-pointer" style={{ "--position": 4 }}>
               <Link
                 target="_blank"
-                href={
-                  "https://github.com/rishabhtiwari-06/Password-Manager-Application"
-                }
+                href="https://github.com/rishabhtiwari-06/Password-Manager-Application"
               >
                 <h3>Password Manager Application</h3>
-                <img src="Password_manager.webp" alt="" />
+                <Image
+                  src="/Password_manager.webp"
+                  alt="Password Manager"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
             <div className="item cursor-pointer" style={{ "--position": 5 }}>
               <Link
                 target="_blank"
-                href={"https://github.com/rishabhtiwari-06/Simple-url-shortner"}
+                href="https://github.com/rishabhtiwari-06/Simple-url-shortner"
               >
                 <h3>URL shortener</h3>
-                <img src="URLshortener.jpeg" alt="" />
+                <Image
+                  src="/URLshortener.jpeg"
+                  alt="URL Shortener"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
             <div className="item cursor-pointer" style={{ "--position": 6 }}>
               <Link
                 target="_blank"
-                href={
-                  "https://github.com/rishabhtiwari-06/Gym-Workout-Generator-Website"
-                }
+                href="https://github.com/rishabhtiwari-06/Gym-Workout-Generator-Website"
               >
                 <h3>Login Form</h3>
-                <img src="login.jpg" alt="" />
+                <Image
+                  src="/login.jpg"
+                  alt="Login Form"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
             <div className="item cursor-pointer" style={{ "--position": 7 }}>
               <Link
                 target="_blank"
-                href={"https://github.com/rishabhtiwari-06/To-Do-List"}
+                href="https://github.com/rishabhtiwari-06/To-Do-List"
               >
                 <h3>ToDo List</h3>
-                <img src="todo.jpg" alt="" />
+                <Image
+                  src="/todo.jpg"
+                  alt="ToDo List"
+                  width={200}
+                  height={150}
+                />
               </Link>
             </div>
           </div>
@@ -280,10 +312,12 @@ export default function Home() {
               </h1>
             </div>
             <div>
-              <img
+              <Image
                 className="h-[170px] w-[170] object-cover rounded-full"
-                src="schl.webp"
+                src="/schl.webp"
                 alt=""
+                width={170}
+                height={170}
               />
             </div>
             <div>
@@ -305,10 +339,12 @@ export default function Home() {
               </h1>
             </div>
             <div>
-              <img
-                className="h-[170px] w-[250] object-contain rounded-lg"
-                src="JAGRAN.png"
-                alt=""
+              <Image
+                className="h-[170px] w-[250px] object-contain rounded-lg"
+                src="/JAGRAN.png"
+                alt="Jagran College Logo"
+                width={250}
+                height={170}
               />
             </div>
             <div>
@@ -351,14 +387,19 @@ export default function Home() {
           className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8"
         >
           <div className="flex flex-col items-center">
-            <motion.img
-              src="picofme.png" // Replace with your image
-              alt="Rishabh Tiwari"
-              className="w-72 h-72 rounded-full border-4 border-blue-500"
+            <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1 }}
-            />
+            >
+              <Image
+                src="/picofme.png"
+                alt="Rishabh Tiwari"
+                width={288}
+                height={288}
+                className="rounded-full border-4 border-blue-500"
+              />
+            </motion.div>
             <h2 className="text-2xl font-semibold mt-4">Who Am I?</h2>
             <p className="text-center text-gray-300 mt-2">
               I’m a final-year B.C.A student with a strong passion for
@@ -378,8 +419,6 @@ export default function Home() {
               <h1 className="text-3xl text-blue-500 font-bold">Skills</h1>
             </div>
             <div className="relative h-32 overflow-hidden rounded-lg md:h-32 flex justify-center items-center">
-              {" "}
-              {/* Reduced height */}
               {carouselItems.map((src, index) => (
                 <div
                   key={index}
@@ -387,8 +426,10 @@ export default function Home() {
                     index === activeIndex ? "opacity-100" : "opacity-0"
                   }`}
                 >
-                  <img
+                  <Image
                     src={src}
+                    width={128}
+                    height={128}
                     className="block w-full h-full object-contain rounded-xl"
                     alt={`Slide ${index + 1}`}
                   />
