@@ -5,6 +5,11 @@
 html {
     scroll-behavior: smooth;
   }
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
   
 .banner{
     width: 100%;
@@ -24,13 +29,22 @@ html {
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
-@keyframes autoRun{
+/* @keyframes autoRun{
     from{
         transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
     }to{
         transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
     }
-}
+} */
+@keyframes autoRun {
+    from {
+      transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }
+    to {
+      transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+  }
+  
 .banner .slider .item{
     position: absolute;
     inset: 0 0 0 0;
@@ -132,7 +146,7 @@ span{
 }
 
 .home-content h3{
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 700;
 }
@@ -235,17 +249,12 @@ span{
 }
 
 @keyframes words{
-    0%, 25%{
+    0%, 50%{
         content: "Web Developer";
     }
-    26%, 50%{
-        content: "Developer";
-    }
-    51%, 75%{
-        content: "FrontEnd Devloper";
-    }
-    76%, 100%{
-        content: "FullStack Devloper";
+    
+    50%, 100%{
+        content: "FullStack Developer";
     }
     
 }

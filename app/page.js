@@ -333,7 +333,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="block rounded-2xl border border-blue-600 bg-slate-950 min-h-[200px] w-2/3 flex flex-col sm:grid sm:grid-cols-3 items-center">
+          <div className=" rounded-2xl border border-blue-600 bg-slate-950 min-h-[200px] w-2/3 flex flex-col sm:grid sm:grid-cols-3 items-center">
             <div className="flex justify-center">
               <h1 className="font-bold text-3xl ">
                 <span className="text-blue-500">COL</span>LEGE
