@@ -12,6 +12,7 @@ export default function Home() {
   const carouselItems = [
     "/html.png",
     "/css.webp",
+    "/javascript.png",
     "/nextjs.png",
     "/python.png",
     "/node.png",
@@ -102,7 +103,7 @@ export default function Home() {
             <div className="border border-yellow rounded-full p-3 bg-yellow-300">
               <Image
                 className=""
-                src="/picofme.png"
+                src="/pick1.jpeg"
                 alt="Rishabh"
                 width={200}
                 height={200}
